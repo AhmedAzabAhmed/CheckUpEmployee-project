@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Results-->
+        <scene sceneID="AtX-2w-vTO">
+            <objects>
+                <tableViewController storyboardIdentifier="EmpRequestSVC" clearsSelectionOnViewWillAppear="NO" id="avz-MO-jAU" customClass="EmployeeRequestsVC" customModule="CheckUpEmployee" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qO5-Ha-Ey6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="1" green="0.97176855799999995" blue="0.92910677190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="userCustomCell" id="7ac-F9-p2E" customClass="UserCustomTableViewCell" customModule="CheckUpEmployee" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7ac-F9-p2E" id="U9p-7N-nbK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="avz-MO-jAU" id="J3R-t5-YmN"/>
+                            <outlet property="delegate" destination="avz-MO-jAU" id="Anz-oe-qOa"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Results" id="4Ir-G8-mnt">
+                        <barButtonItem key="leftBarButtonItem" image="Exit_20px" id="9f0-sC-nzz">
+                            <connections>
+                                <action selector="logoutBtn:" destination="avz-MO-jAU" id="38X-QQ-Qjz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Synchronize_20px" style="plain" id="Qln-aI-T4k">
+                            <connections>
+                                <action selector="refreshBtn:" destination="avz-MO-jAU" id="vy8-sP-VXZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhe-d9-hYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2086" y="-75"/>
+        </scene>
+        <!--loginSVC-->
+        <scene sceneID="4qM-DX-MAg">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="loginSVC" storyboardName="Login" referencedIdentifier="loginSVC" id="tMR-2k-LQy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eu7-Cx-q08"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sue-uB-GZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2536" y="-134"/>
+        </scene>
+        <!--Style View Controller-->
+        <scene sceneID="DjU-dp-6Kr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H8p-Sl-ioV" customClass="StyleViewController" customModule="CheckUpEmployee" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LPO-vF-k5a">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="avz-MO-jAU" kind="relationship" relationship="rootViewController" id="0lT-0G-eJk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8K-8f-IYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="-61"/>
+        </scene>
+        <!--userDetailsViewControllerSB-->
+        <scene sceneID="kZw-R2-6K0">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="userDetailsViewControllerSB" storyboardName="UserDetails" referencedIdentifier="userDetailsViewControllerSB" id="KVP-4h-C81" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3V-DW-iHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2566" y="41"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Exit_20px" width="20" height="20"/>
+        <image name="Synchronize_20px" width="20" height="20"/>
+    </resources>
+</document>
